@@ -51,6 +51,11 @@ int main(int argc, char** argv) {
         {
 			kier=getch();
 		}
+
+		if(t[0].kierunek == 'w' && kier == 's') kier = 'w';
+		else if(t[0].kierunek == 's' && kier == 'w') kier = 's';
+		else if(t[0].kierunek == 'a' && kier == 'd') kier = 'a';
+		else if(t[0].kierunek == 'd' && kier == 'a') kier = 'd';
 		
   		rus(t,kier);
   		
@@ -105,6 +110,7 @@ int main(int argc, char** argv) {
 	
 	cout << "Skor: " << punkty << '\n';
 	
+	getch();
 	return 0;
 }
 
